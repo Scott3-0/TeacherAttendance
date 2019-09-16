@@ -6,9 +6,9 @@ from email.encoders import encode_base64
 import os
 
 login = 'testertesting465@gmail.com'
-password = 'Pps573551'
+password = ''
 sender = 'testertesting465@gmail.com'
-receivers = ['bremmerscottw@gmail.com']
+receivers = ['aidan.ksw@gmail.com']
 
 msg = MIMEMultipart()
 msg['From'] = sender
@@ -18,7 +18,7 @@ msg['Subject'] = "Test Message"
 # Simple text message or HTML
 TEXT = "Hello everyone,\n"
 TEXT = TEXT + "\n"
-TEXT = TEXT + "jajajajajaja\n"
+TEXT = TEXT + "Important message.\n"
 TEXT = TEXT + "\n"
 TEXT = TEXT + "Thanks,\n"
 TEXT = TEXT + "SMTP Robot"
@@ -39,4 +39,5 @@ smtpObj.ehlo()
 smtpObj.starttls()
 smtpObj.login(login, password)
 smtpObj.sendmail(sender, receivers, msg.as_string())
-print('Email sent!')
+
+input()
