@@ -3,12 +3,19 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email.encoders import encode_base64
-import os
+import datetime
+from random import randint
+
+now = datetime.datetime.now()
+curDate = now.day + now.month + now.year #equal to 9+17+2019=2045 on Sept 17, 2019
+dayCode = curDate * (randint(1,99)) #Multiplies curDate by a random integer from 1 to 99
 
 login = 'testertesting465@gmail.com'
 password = ''
 sender = 'testertesting465@gmail.com'
 receivers = ['aidan.ksw@gmail.com']
+
+print(dayCode)
 
 msg = MIMEMultipart()
 msg['From'] = sender
